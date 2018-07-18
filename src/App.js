@@ -19,7 +19,6 @@ class App extends Component {
       <main>
         <Route exact path ='/' component={CategoriesContainer}/>
         <Route exact path ='/:categoryId' component={CocktailContainer}/>
-        {/* <CategoriesContainer/> */}
       </main>
       </div>
     );
