@@ -8,6 +8,7 @@ import CocktailDetailContainer from './components/CocktailDetailContainer';
 
 class App extends Component {
   render() {
+    console.log(this)
     return (
       <div className="App">
         <header className="App-header">

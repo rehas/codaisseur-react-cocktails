@@ -41,7 +41,6 @@ export default class CategoriesContainer extends PureComponent{
          console.log(categories)
         return (
         <div>
-            <p>Hello I'm Categories Container</p>
             {!categories && 'Loading Categories...' }
             {categories && categories.map((x,i)=> {
                 {/* console.log("were mapping thorugh categories now") */}

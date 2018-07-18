@@ -53,13 +53,12 @@ export default class CocktailContainer extends PureComponent{
         return (
             <div>
             <h2>{categoryName}</h2>
-            <p>I'm the cocktailContainer Babe!!</p>
-            <p>{this.state.cocktails === null && 'Cocktails loading'}</p>
+            <p>{this.state.images === null && 'Cocktails loading'}</p>
             
             {this.state.images !==null && 
                 this.state.images.map(x=>{
                     return (
-                        <a href={'/' +this.state.id + '/' + x.idDrink }>
+                        <a key={x.idDrink} href={'/' +this.state.id + '/' + x.idDrink }>
                         <Cocktails
                         imageDetails = {x}
                         />
