@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Route} from 'react-router-dom'
+import CategoriesContainer from './components/CategoriesContainer';
 
 class App extends Component {
   render() {
@@ -13,6 +15,11 @@ class App extends Component {
         <p className="App-intro">
           To get started, click a cocktail category
         </p>
+      <main>
+        <Route exact path ='/' component={CategoriesContainer}/>
+        {/* <Route exact path ='/:category' component={CategoriesContainer}/> */}
+        {/* <CategoriesContainer/> */}
+      </main>
       </div>
     );
   }
