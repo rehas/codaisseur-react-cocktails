@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import {Route} from 'react-router-dom'
 import CategoriesContainer from './components/CategoriesContainer';
+import CocktailContainer from './components/CocktailContainer';
 
 class App extends Component {
   render() {
@@ -17,7 +18,7 @@ class App extends Component {
         </p>
       <main>
         <Route exact path ='/' component={CategoriesContainer}/>
-        {/* <Route exact path ='/:category' component={CategoriesContainer}/> */}
+        <Route exact path ='/:categoryId' component={CocktailContainer}/>
         {/* <CategoriesContainer/> */}
       </main>
       </div>
