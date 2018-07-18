@@ -4,6 +4,7 @@ import './App.css';
 import {Route} from 'react-router-dom'
 import CategoriesContainer from './components/CategoriesContainer';
 import CocktailContainer from './components/CocktailContainer';
+import CocktailDetailContainer from './components/CocktailDetailContainer';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
       <main>
         <Route exact path ='/' component={CategoriesContainer}/>
         <Route exact path ='/:categoryId' component={CocktailContainer}/>
+        <Route exact path ='/:categoryId/:cocktailId' component={CocktailDetailContainer}/>
       </main>
       </div>
     );

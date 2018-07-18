@@ -4,17 +4,15 @@ export default class Cocktails extends PureComponent{
     render(){
         console.log("Im coming from Cocktails Component")
         console.log(this.props)
-        const imagesArr = this.props.imagesArray
+        const imageDetails = this.props.imageDetails
         return (
             <div className="cocktail">
-                {imagesArr && imagesArr.map(x =>{
-                    return (
-                        <div key={x.idDrink}>
-                            <img src={x.strDrinkThumb} alt=""/>
-                            <p> {x.strDrink}</p>
-                        </div>
-                    )
-                })}
+                {imageDetails && 
+                 <div key={imageDetails.idDrink} >
+                    <img src={imageDetails.strDrinkThumb} alt=""/>
+                    <p> {imageDetails.strDrink}</p>
+                 </div>
+                }
             </div>
         )
     }
